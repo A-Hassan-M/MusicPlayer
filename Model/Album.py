@@ -11,6 +11,3 @@ class Album:
         self.number_of_songs = num_of_songs
         self.band = band
         self.songs = songs
-
-    def addSong(self, song):
-        self.songs.append(song)
