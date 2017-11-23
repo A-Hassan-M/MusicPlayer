@@ -1,16 +1,16 @@
 class Song:
     name = ''
     bands = []
-    album_title = ''
+    album = None
     release_date = ''
     lyrics = ''
     genres = ''
     length = 0
 
-    def __init__(self, name, artists, bands, album_title, release_date, lyrics, genres, length):
+    def __init__(self, name, artists, bands, album, release_date, lyrics, genres, length):
         self.name = name
         self.bands = bands
-        self.album_title = album_title
+        self.album = album
         self.release_date = release_date
         self.lyrics = lyrics
         self.genres = genres
