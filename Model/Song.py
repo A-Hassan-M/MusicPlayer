@@ -1,7 +1,7 @@
 class Song:
     name = ''
     bands = []
-    album_name = ''
+    album_title = ''
     release_date = ''
     lyrics = ''
     genres = ''
