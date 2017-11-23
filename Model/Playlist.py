@@ -7,6 +7,3 @@ class Playlist:
         self.name = name
         self.description = description
         self.songs = songs
-
-    def addSong(self, song):
-        self.songs.append(song)
