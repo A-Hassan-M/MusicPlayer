@@ -4,7 +4,7 @@ class Song:
     album = None
     release_date = ''
     lyrics = ''
-    genres = ''
+    genres = []
     length = 0
 
     def __init__(self, name, artists, bands, album, release_date, lyrics, genres, length):

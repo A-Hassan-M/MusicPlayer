@@ -3,7 +3,6 @@ import Model.Band as Band
 class Album:
     title = ''
     number_of_songs = 0
-    band = []
     songs = []
 
     def __init__(self, title, num_of_songs, band, songs):
