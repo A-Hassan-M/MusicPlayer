@@ -7,6 +7,3 @@ class Band:
         self.name = name
         self.artists = artists
         self.songs = songs
-
-    def addSong(self, song):
-        self.songs.append(song)
