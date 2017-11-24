@@ -7,6 +7,7 @@ class Song:
     lyrics = ''
     genres = []
     length = 0
+    path = ''
 
     def __init__(self, name, bands, featured_bands, album, release_date, lyrics, genres, length):
         self.name = name
