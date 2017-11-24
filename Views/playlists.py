@@ -24,11 +24,11 @@ class PlaylistDetails_View():
 
     def __init__(self):
         self.choice_listener = PlaylistMenu_listener()
-    def showPlaylistDetails(self,playlist):
+    def showPlaylistDetails(self,playlist, songs):
         print('/////////////////////////////\n')
         print("Playlist name: "+playlist.title+'\n')
 
-        for song in playlist.songs:
+        for song in songs:
             print('*',song.name+'\tDuration',song.length)
 
         song_name = input("Choose a song or enter 0 for main menu: ")
