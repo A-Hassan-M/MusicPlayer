@@ -1,7 +1,7 @@
 class Artist:
     name = ''
     date_of_birth = ''
-    band = None
+    band = ''
     
     def __init__(self, name, date_of_birth, band):
         self.name = name

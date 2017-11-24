@@ -3,7 +3,7 @@ class AlbumModel:
     def get_albums(self):
 
 
-        return []
+        return True
 
     def get_album(self, name):
 
