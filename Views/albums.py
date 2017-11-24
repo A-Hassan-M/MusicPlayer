@@ -18,7 +18,26 @@ class Albums_menu():
         print('/////////////////////////////')
         self.choice_listener.on_input(album_name)
 
+class AlbumDetails_View():
+    choice_listener = None
+
+    def __init__(self):
+        self.choice_listener = AlbumMenu_listener()
+    def showAlbumDetails(self,album):
+        print('/////////////////////////////\n')
+        print("Album name: "+album.title+'\n')
+
+        for song in album.songs:
+            print('*',song.name+'\tDuration',song.length)
+
+        song_name = input("Choose a song or enter 0 for main menu: ")
+
+        print('/////////////////////////////')
+        self.choice_listener.onSongSelected(song_name)
 
 class AlbumMenu_listener():
     def on_input(self, choice):
+        pass
+
+    def onSongSelected(self, choice):
         pass

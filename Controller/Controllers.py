@@ -1,10 +1,11 @@
 from Model.ArtistModel import ArtistModel
 from Model.PlaylistModel import PlaylistModel
 from Model.AlbumModel import AlbumModel
+from Model.SongModel import SongModel
 
-from Views.albums import Albums_menu, AlbumMenu_listener
+from Views.albums import Albums_menu, AlbumMenu_listener,AlbumDetails_View
 from Views.artists import Artists_menu, ArtistMenu_listener
-from Views.playlists import Playlists_menu,PlaylistMenu_listener
+from Views.playlists import Playlists_menu,PlaylistMenu_listener,PlaylistDetails_View
 from Views.menu import Menu,MainMenu_listener
 
 
@@ -23,6 +24,16 @@ class Playlist_Menu_Controller(PlaylistMenu_listener):
     def on_input(self,choice):
         if(choice == '0'):
             Main().showMainMenu()
+        else:
+            playlist = self.playlistDBModel.get_playlist(choice)
+            self.menu = PlaylistDetails_View()
+            self.menu.choice_listener = self
+            self.menu.showPlaylistDetails(playlist)
+    def onSongSelected(self,song_name):
+        if (song_name == '0'):
+            Main().showMainMenu()
+        else: print(song_name)
+
 
 class ArtistMenuController(ArtistMenu_listener):
     artistDBModel = None
@@ -60,8 +71,17 @@ class AlbumMenuController(AlbumMenu_listener):
         if (choice == '0'):
             Main().showMainMenu()
         else:
+            album = self.albumDBModel.get_album(choice)
+            self.menu = AlbumDetails_View()
+            self.menu.choice_listener = self
+            self.menu.showAlbumDetails(album)
+    def onSongSelected(self, choice):
+        if (choice == '0'):
+            Main().showMainMenu()
+        else:
             pass
 
+#Done
 class Main(MainMenu_listener):
     menu = None
     def showMainMenu(self):
