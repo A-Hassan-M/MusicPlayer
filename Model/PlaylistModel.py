@@ -1,10 +1,12 @@
+from Model.Playlist import Playlist
+
 class PlaylistModel:
 
      def get_playlists(self):
-
-
-
-        return True;
+        playlists =[]
+        for i in range(10):
+            playlists += [Playlist("aa","sad",[1,2,3])]
+        return playlists;
 
      def get_playlist(self, name):
 

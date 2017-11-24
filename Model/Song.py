@@ -2,7 +2,7 @@ class Song:
     name = ''
     bands = []
     featured_bands = []
-    album = None
+    album_title = None
     release_date = ''
     lyrics = ''
     genres = []
