@@ -1,3 +1,5 @@
+from Model.Song import Song
+
 class Song_View():
     choice_listener = None
 
@@ -16,8 +18,25 @@ class Song_View():
         choice = input("Enter p to play the song or 0 to go back")
 
         print('/////////////////////////////')
-        self.choice_listener.onSongSelected(choice)
+        self.choice_listener.onSongOptionsInput(choice)
+
+class AddSong_View():
+    choice_listener = None
+    def __init__(self):
+        self.choice_listener = SongOptions_listener()
+    def showSongForm(self):
+        song = Song()
+        song.name = input("Enter song name")
+        song.genres = input("Enter song genres seperated by commas").split(',')
+        song.release_date = input("Enter song release date")
+        song.length = input("Enter song duration")
+        song.album = input("Enter song album")
+        song.bands = input("Enter song band/artist")
+        self.choice_listener.onSongCreated(song)
+
 
 class SongOptions_listener():
-    def on_input(self,choice):
+    def onSongOptionsInput(self,choice):
+        pass
+    def onSongCreated(self,song):
         pass

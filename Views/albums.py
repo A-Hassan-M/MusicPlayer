@@ -16,7 +16,7 @@ class Albums_menu():
         album_name = input("Choose an album or enter 0 for main menu: ")
 
         print('/////////////////////////////')
-        self.choice_listener.on_input(album_name)
+        self.choice_listener.onAlbumMenuInput(album_name)
 
 class AlbumDetails_View():
     choice_listener = None
@@ -36,7 +36,7 @@ class AlbumDetails_View():
         self.choice_listener.onSongSelected(song_name)
 
 class AlbumMenu_listener():
-    def on_input(self, choice):
+    def onAlbumMenuInput(self, choice):
         pass
 
     def onSongSelected(self, choice):

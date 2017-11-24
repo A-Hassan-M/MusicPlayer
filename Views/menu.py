@@ -9,7 +9,7 @@ class Menu():
         print('/////////////////////////////')
         print("Welcome To Musicly\n")
 
-        print("1. Playlists 2. Artists 3. Albums 4. Exit")
+        print("1. Playlist\n2. Artists\n3. Albums\n4. Exit")
         choice = input("choose your option: ")
 
         print('/////////////////////////////')
