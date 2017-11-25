@@ -4,11 +4,11 @@ from Model.AlbumModel import album_model
 from Model.SongModel import song_model
 from Model.BandModel import band_model
 
-from Views.albums import Albums_menu, AlbumMenu_listener,AlbumDetails_View
+from Views.albums import Albums_menu, AlbumMenuListener,AlbumDetails_View,AddAlbumView
 from Views.artists import Artists_menu, ArtistMenu_listener
 from Views.playlists import Playlists_menu,PlaylistMenu_listener,PlaylistDetails_View
-from Views.playlists import AddPlayList_View
-from Views.songs import Song_View,SongOptions_listener,AddSong_View
+from Views.playlists import AddPlayListView
+from Views.songs import Song_View,SongOptions_listener,AddSongView
 from Views.menu import Menu,MainMenu_listener
 
 from Media.MediaPlayer import media_player
@@ -16,18 +16,23 @@ from Media.MediaPlayer import media_player
 # Global function
 def add_song(song, playlist_name):
     try:
-        print(song.name)
         song_model.add_song(song, playlist_name)
         print("Song created")
-    except:
-        print("Another song exists with the same name")
+    except:pass
+
+    try:
+        song_model.add_playlist_songs(song.name, playlist_name)
+        print("Song created")
+    except:print("Song name already exists")
+
     try:
         for band_name in song.bands:
             band_model.add_band(band_name)
         band_model.add_song_band(song)
+    except:pass
+    try:
         album_model.add_album(song.album)
-    except:
-        pass
+    except: pass
 
 # Playlist Controller
 class PlaylistController(PlaylistMenu_listener):
@@ -62,13 +67,14 @@ class PlaylistController(PlaylistMenu_listener):
                 return pl
         return None
 
+    # Listeners
     def on_playlists_menu_input(self,choice,playlist_name=''):
         if(choice == '1'):
             self.showPlaylist(playlist_name)
         elif(choice == '2'):
             Main().showMainMenu()
         elif(choice == '3'):
-            self.menu = AddPlayList_View()
+            self.menu = AddPlayListView()
             self.menu.choice_listener = self
             self.menu.showPlaylistForm()
         elif(choice == '4'):
@@ -82,8 +88,9 @@ class PlaylistController(PlaylistMenu_listener):
                 self.songController = PlaylistSongsController()
             self.songController.addSongToPLaylist(self.playlist.name)
         elif (choice == 'p'):
+            print(len(self.playlist.songs))
             media_player.play_songs(self.playlist.songs)
-            self.showAllPlaylists()
+            self.showPlaylist(self.playlist.name)
         else:
             if (self.songController is None):
                 self.songController = PlaylistSongsController()
@@ -124,7 +131,7 @@ class PlaylistSongsController(SongOptions_listener):
 
     def showSongDescription(self, song_name,playlist_name):
         self.playlist_name = playlist_name
-        self.song = self.getSong(song_name)
+        self.song = song_model.get_song(song_name)
         if (self.song is None):
             print("song doesn't exist!!",self.playlist_name)
             PlaylistController().showPlaylist(self.playlist_name)
@@ -133,10 +140,11 @@ class PlaylistSongsController(SongOptions_listener):
 
     def addSongToPLaylist(self,playlist_name):
         self.playlist_name = playlist_name
-        self.menu = AddSong_View()
+        self.menu = AddSongView()
         self.menu.choice_listener = self
         self.menu.showSongForm()
 
+    # Listeners
     def onSongOptionsInput(self,choice):
         if(choice == '0'):
             PlaylistController().showPlaylist(self.playlist_name)
@@ -146,7 +154,6 @@ class PlaylistSongsController(SongOptions_listener):
             except:
                 print("The associated path is invalid")
             self.showSongDescription(self.song.name,self.playlist_name)
-
 
     def onSongCreated(self,song):
         add_song(song, self.playlist_name)
@@ -166,7 +173,7 @@ class SongController(SongOptions_listener):
     def getAlbumSongs(self,album_name):
         self.album_name = album_name
         if (len(self.songs) == 0):
-            self.songs = song_model.getAlbumSongs(album_name)
+            self.songs = album_model.get_album(album_name)
         return self.songs
 
     def showSongDescription(self, song_name):
@@ -185,6 +192,7 @@ class SongController(SongOptions_listener):
                 return song
         return None
 
+    # Listeners
     def onSongOptionsInput(self,choice):
         if(choice == '0'):
             AlbumMenuController().showAlbum(self.album_name)
@@ -214,6 +222,7 @@ class ArtistMenuController(ArtistMenu_listener):
         self.artists = self.artistDBModel.get_artists()
         self.menu.show(self.artists)
 
+    # Listeners
     def onArtistMenuInput(self, choice):
         if (choice == '0'):
             Main().showMainMenu()
@@ -221,10 +230,11 @@ class ArtistMenuController(ArtistMenu_listener):
             pass
 
 # Album Controller
-class AlbumMenuController(AlbumMenu_listener):
+class AlbumMenuController(AlbumMenuListener):
     menu = None
     albums = []
     songController = None
+    album = None
 
     def showAllAlbums(self):
         if(len(self.albums) == 0):
@@ -234,17 +244,14 @@ class AlbumMenuController(AlbumMenu_listener):
         self.menu.show(self.albums)
 
     def showAlbum(self, album_name):
-        album = self.getAlbum(album_name)
-        if (album is None):
+        self.album = album_model.get_album(album_name)
+        if (self.album is None):
             print("album doesn't exist!!")
             self.showAllAlbums()
         else:
-            if (self.songController is None):
-                self.songController = SongController()
-            songs = self.songController.getAlbumSongs(album_name)
             self.menu = AlbumDetails_View()
             self.menu.choice_listener = self
-            self.menu.showAlbumDetails(album, songs)
+            self.menu.showAlbumDetails(self.album)
 
     def getAlbum(self,album_name):
         if (len(self.albums) == 0):
@@ -254,6 +261,7 @@ class AlbumMenuController(AlbumMenu_listener):
                 return album
         return None
 
+    # Listeners
     def onAlbumMenuInput(self, choice,album_name=''):
         print("w ",choice)
         if (choice == '1'):
@@ -261,20 +269,27 @@ class AlbumMenuController(AlbumMenu_listener):
         elif (choice == '2'):
             Main().showMainMenu()
         elif (choice == '3'):
-            # self.menu = AddAlbum_View()
-            # self.menu.choice_listener = self
-            # self.menu.showAlbumForm()
-            pass
+            self.menu = AddAlbumView()
+            self.menu.choice_listener = self
+            self.menu.showAlbumForm()
         elif (choice == '4'):
             pm.remove_album(album_name)
 
-    def onSongSelected(self, choice):
+    def onSongMenuInput(self, choice):
         if (choice == '0'):
             Main().showMainMenu()
+        elif (choice == 'p'):
+            media_player.play_songs(self.album.songs)
+            self.showAlbum(self.album.name)
         else:
             if (self.songController is None):
                 self.songController = SongController()
-            self.songController.showSongDescription(choice)
+            self.songController.showSongDescription(choice, self.album.name)
+
+    def onAlbumDataEntered(self, album_data):
+        try:
+            album_model.add_album(album_data)
+        except: print("Album with the same name already exists")
 
 # Main Menu Controller
 class Main(MainMenu_listener):
@@ -284,6 +299,7 @@ class Main(MainMenu_listener):
         self.menu.choice_listener = self
         self.menu.show_options()
 
+    # Listeners
     def on_input(self, choice):
         if(choice == '1'):
             playlist_controller = PlaylistController()

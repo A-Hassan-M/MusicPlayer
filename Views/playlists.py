@@ -46,8 +46,8 @@ class PlaylistDetails_View():
         else:
             self.show_songs()
 
-            print("Enter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")
-            print("Or 'order' to order the songs\nOr p to play playlist songs")
+            print("\nEnter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")
+            print("Or p to play playlist songs")
         choice = input("")
 
         # if(choice == 'order'):
@@ -68,7 +68,7 @@ class PlaylistDetails_View():
         return order_choice
 
 
-class AddPlayList_View():
+class AddPlayListView():
     choice_listener = None
     def __init__(self):
         self.choice_listener = PlaylistMenu_listener()

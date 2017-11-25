@@ -24,16 +24,18 @@ class AlbumModel:
             album.name = row[0]
 
         result = conn.execute("SELECT name FROM song " +
-                              "WHERE album_name = '" + album + "'")
+                              "WHERE album_name = '" + album.name + "'")
+        songs= []
         for song_name in result:
-            album.songs.append(song_model.get_song(song_name))
+            songs.append(song_model.get_song(song_name[0]))
 
+        album.songs = songs
         album.number_of_songs = len(album.songs)
 
         return album
 
     def add_album(self, name):
-        conn.execute("INSERT INTO album VALUES('" + name + "'")
+        conn.execute("INSERT INTO album VALUES('" + name + "')")
         conn.execute()
 
     def remove_album(self,title):

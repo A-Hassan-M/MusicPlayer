@@ -21,7 +21,8 @@ connection.execute("CREATE TABLE IF NOT EXISTS playlist ("
 
 connection.execute("CREATE TABLE IF NOT EXISTS playlist_song (" +
                    "playlist_name TEXT REFERENCES playlist (name), " +
-                   "song_name TEXT REFERENCES song (name));")
+                   "song_name TEXT REFERENCES song (name),"+
+                   "PRIMARY KEY (playlist_name,song_name));")
 
 connection.execute("CREATE TABLE IF NOT EXISTS song (" +
                    "name TEXT PRIMARY KEY, " +
@@ -34,6 +35,6 @@ connection.execute("CREATE TABLE IF NOT EXISTS song (" +
 connection.execute("CREATE TABLE IF NOT EXISTS song_band (" +
                    "song_name TEXT REFERENCES song (name), " +
                    "band_name TEXT REFERENCES band (name), " +
-                   "featured BOOLEAN);")
+                   "featured TEXT);")
 
 connection.commit()

@@ -2,7 +2,7 @@ class Albums_menu():
     choice_listener = None
 
     def __init__(self):
-        self.choice_listener = AlbumMenu_listener()
+        self.choice_listener = AlbumMenuListener()
 
     def show(self, albums):
         i = 0
@@ -21,10 +21,9 @@ class Albums_menu():
         choice = input()
 
         if (choice == '4' or choice == '1'):
-            album_name = input("Enter playlist name: ")
+            album_name = input("Enter album name: ")
             self.choice_listener.onAlbumMenuInput(choice, album_name)
         else:
-            print("choice",choice)
             self.choice_listener.onAlbumMenuInput(choice)
         print('/////////////////////////////')
 
@@ -32,22 +31,37 @@ class AlbumDetails_View():
     choice_listener = None
 
     def __init__(self):
-        self.choice_listener = AlbumMenu_listener()
+        self.choice_listener = AlbumMenuListener()
     def showAlbumDetails(self,album):
         print('/////////////////////////////\n')
-        print("Album name: "+album.title+'\n')
+        print("Album name: "+album.name+'\n')
 
-        for song in album.songs:
-            print('*',song.name+'\tDuration',song.length)
+        if (len(album.songs) == 0):
+            print("This album is empty!!\nEnter add to add a song to it\nEnter 0 to go back")
+        else:
+            for song in album.songs:
+                print('*', song.name + '\tDuration', song.length)
 
-        song_name = input("Choose a song or enter 0 for main menu: ")
+        print("\nEnter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")
+        print("Or p to play playlist songs")
+
+        choice = input("")
 
         print('/////////////////////////////')
-        self.choice_listener.onSongSelected(song_name)
+        self.choice_listener.onSongMenuInput(choice)
 
-class AlbumMenu_listener():
+class AddAlbumView():
+    choice_listener = None
+    def __init__(self):
+        self.choice_listener = AlbumMenuListener()
+    def showAlbumForm(self):
+        album_name = input("Enter album name: ")
+        self.choice_listener.onAlbumDataEntered(album_name)
+
+class AlbumMenuListener():
     def onAlbumMenuInput(self, choice,additonal_attr=''):
         pass
-
-    def onSongSelected(self, choice):
+    def onAlbumDataEntered(self, album_data):
+        pass
+    def onSongMenuInput(self, choice):
         pass

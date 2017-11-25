@@ -19,6 +19,7 @@ class MediaPlayer(PlayerOptionsListener):
 
     def play_songs(self,songs):
         self.songs = songs
+        self.stop = False
         for song in songs:
             if(self.stop):
                 break

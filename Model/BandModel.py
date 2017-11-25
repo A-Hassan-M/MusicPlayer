@@ -13,18 +13,18 @@ class BandModel:
 
         return songs
     def add_band(self,band_name):
-        conn.execute("INSERT INTO playlist_song VALUES('" + band_name + "')")
+        conn.execute("INSERT INTO band VALUES('" + band_name + "')")
         conn.commit()
 
     def add_song_band(self,song):
         for band_name in song.bands:
-            conn.execute("INSERT INTO song_band VALUES'" + song.name +"','"
+            conn.execute("INSERT INTO song_band VALUES('" + song.name +"','"
                                                          + band_name +"',"
-                                                         + False +")")
+                                                         + '0'+")")
         for band_name in song.featured_bands:
-            conn.execute("INSERT INTO song_band VALUES'" + song.name + "','"
+            conn.execute("INSERT INTO song_band VALUES('" + song.name + "','"
                                                          + band_name + "',"
-                                                         + True + ")")
+                                                         + '1' + ")")
 
         conn.commit()
 band_model = BandModel()

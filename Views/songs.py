@@ -20,7 +20,7 @@ class Song_View():
         print('/////////////////////////////')
         self.choice_listener.onSongOptionsInput(choice)
 
-class AddSong_View():
+class AddSongView():
     choice_listener = None
     def __init__(self):
         self.choice_listener = SongOptions_listener()
