@@ -46,10 +46,15 @@ class PlaylistModel:
 
 
      def remove_playlist(self, name):
+         conn.execute("DELETE FROM playlist_song " +
+                     "WHERE playlist_name = '" + name + "'")
 
+         conn.execute("DELETE FROM playlist " +
+                      "WHERE name = '" + name + "'")
+         conn.commit()
 
-         return True;
-
-
-pm = PlaylistModel()
-# pm.add_playlist("Sad Playlist", "Here you can find sad playlists")
+     def remove_playlist_song(self, playlist_name, song_name):
+         conn.execute("DELETE FROM playlist_song " +
+                      "WHERE playlist_name = '" + playlist_name + "' " +
+                      "AND song_name = '" + song_name + "'")
+         conn.commit()

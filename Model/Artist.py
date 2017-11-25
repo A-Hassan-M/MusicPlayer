@@ -1,9 +1,6 @@
 class Artist:
-    name = ''
-    date_of_birth = ''
-    band = ''
-    
-    def __init__(self, name, date_of_birth, band):
-        self.name = name
-        self.date_of_birth = date_of_birth
-        self.band = band
+
+    def __init__(self):
+        self.name = ''
+        self.date_of_birth = ''
+        self.band = ''

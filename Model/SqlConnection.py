@@ -1,13 +1,14 @@
 import sqlite3
 
-connection = sqlite3.connect("/home/ahmed/PycharmProjects/Musicly/Model/musicly.db")
+connection = sqlite3.connect("musicly.db")
 
 connection.execute("CREATE TABLE IF NOT EXISTS album (" +
                    "name TEXT PRIMARY KEY);")
 
 connection.execute("CREATE TABLE IF NOT EXISTS artist (" +
                    "name TEXT, " +
-                   "date_of_birth DATE)")
+                   "date_of_birth DATE, " +
+                   "band_name TEXT REFERENCES band (name));")
 
 connection.execute("CREATE TABLE IF NOT EXISTS band (" +
                    "name TEXT PRIMARY KEY);")
@@ -32,6 +33,5 @@ connection.execute("CREATE TABLE IF NOT EXISTS song_band (" +
                    "song_name TEXT REFERENCES song (name), " +
                    "band_name TEXT REFERENCES band (name), " +
                    "featured BOOLEAN);")
-
 
 connection.commit()
