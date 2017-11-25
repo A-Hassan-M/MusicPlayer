@@ -120,8 +120,11 @@ class PlaylistSongsController(SongOptions_listener):
     def onSongOptionsInput(self,choice):
         if(choice == '0'):
             PlaylistController().showPlaylist(self.playlist_name)
-        else:
-            media_player.play_song(self.song)
+        elif (choice == 'p'):
+            try:
+                media_player.play_song(self.song)
+            except:
+                print("The associated path is invalid")
             self.showSongDescription(self.song.name,self.playlist_name)
 
 
@@ -167,10 +170,11 @@ class SongController(SongOptions_listener):
         if(choice == '0'):
             AlbumMenuController().showAlbum(self.album_name)
         elif(choice == 'p'):
-            print("play",self.song.path)
-            # if(self.media_player is None):
-            #     self.media_player = MediaPlayer()
-            # self.media_player.play(song)
+            try:
+                media_player.play_song(self.song)
+            except:
+                print("The associated path is invalid")
+            self.showSongDescription(self.song.name, self.playlist_name)
 
     def onSongCreated(self,song):
         #song_model.add_song(song)

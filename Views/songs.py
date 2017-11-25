@@ -15,7 +15,7 @@ class Song_View():
         print("Release date:",song.release_date)
         print("Genres:",song.genres)
 
-        choice = input("Enter p to play the song or 0 to go back")
+        choice = input("Enter p to play the song or 0 to go back: ")
 
         print('/////////////////////////////')
         self.choice_listener.onSongOptionsInput(choice)

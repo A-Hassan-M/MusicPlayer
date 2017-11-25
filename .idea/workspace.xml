@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43c97732-8a49-4f87-ad56-5edc876987ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/musicly.db" afterPath="$PROJECT_DIR$/Model/musicly.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/Controllers.py" afterPath="$PROJECT_DIR$/Controller/Controllers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/albums.py" afterPath="$PROJECT_DIR$/Views/albums.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/playlists.py" afterPath="$PROJECT_DIR$/Views/playlists.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/songs.py" afterPath="$PROJECT_DIR$/Views/songs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,21 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controllers.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controllers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller/Controllers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="119" column="40" lean-forward="true" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
+            <state relative-caret-position="269">
+              <caret line="122" column="28" lean-forward="false" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#4082#4225#0" expanded="false" />
-                <element signature="e#4723#6161#0" expanded="false" />
-                <element signature="e#6234#6692#0" expanded="false" />
-                <element signature="e#6321#6431#0" expanded="false" />
-                <element signature="e#6471#6555#0" expanded="false" />
-                <element signature="e#7185#7645#0" expanded="false" />
-                <element signature="e#7690#7900#0" expanded="false" />
-                <element signature="e#8695#9293#0" expanded="false" />
+                <element signature="e#6382#6840#0" expanded="false" />
+                <element signature="e#6469#6579#0" expanded="false" />
+                <element signature="e#6619#6703#0" expanded="false" />
+                <element signature="e#7333#7793#0" expanded="false" />
+                <element signature="e#7838#8048#0" expanded="false" />
+                <element signature="e#8843#9441#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -40,8 +36,8 @@
       <file leaf-file-name="albums.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/albums.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+            <state relative-caret-position="326">
+              <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -60,61 +56,17 @@
       <file leaf-file-name="AlbumModel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/AlbumModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="288">
               <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playlists.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/playlists.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MediaPlayerView.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/MediaPlayerView.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MediaPlayer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Media/MediaPlayer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="songs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/songs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-              <folding>
-                <element signature="e#685#1233#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SongModel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SongModel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Model/SongModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
+            <state relative-caret-position="452">
               <caret line="43" column="21" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
               <folding />
             </state>
@@ -124,7 +76,7 @@
       <file leaf-file-name="PlaylistModel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/PlaylistModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
+            <state relative-caret-position="810">
               <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
               <folding />
             </state>
@@ -173,12 +125,12 @@
         <option value="$PROJECT_DIR$/Model/AlbumModel.py" />
         <option value="$PROJECT_DIR$/Views/MediaPlayerView.py" />
         <option value="$PROJECT_DIR$/Model/SongModel.py" />
-        <option value="$PROJECT_DIR$/Views/songs.py" />
         <option value="$PROJECT_DIR$/Media/MediaPlayer.py" />
         <option value="$PROJECT_DIR$/Model/Song.py" />
         <option value="$PROJECT_DIR$/Views/playlists.py" />
         <option value="$PROJECT_DIR$/Views/albums.py" />
         <option value="$PROJECT_DIR$/Controller/Controllers.py" />
+        <option value="$PROJECT_DIR$/Views/songs.py" />
       </list>
     </option>
   </component>
@@ -206,7 +158,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -234,6 +185,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -385,18 +337,102 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Controller/Controllers.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#4082#4225#0" expanded="false" />
+            <element signature="e#6382#6840#0" expanded="false" />
+            <element signature="e#6469#6579#0" expanded="false" />
+            <element signature="e#6619#6703#0" expanded="false" />
+            <element signature="e#7333#7793#0" expanded="false" />
+            <element signature="e#7838#8048#0" expanded="false" />
+            <element signature="e#8843#9441#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/albums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/AlbumModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/playlists.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/MediaPlayerView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Media/MediaPlayer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/songs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding>
+            <element signature="e#687#1235#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/SongModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="43" column="21" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/PlaylistModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/Controllers.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#4082#4225#0" expanded="false" />
-            <element signature="e#4723#6161#0" expanded="false" />
-            <element signature="e#6234#6692#0" expanded="false" />
-            <element signature="e#6321#6431#0" expanded="false" />
-            <element signature="e#6471#6555#0" expanded="false" />
-            <element signature="e#7185#7645#0" expanded="false" />
-            <element signature="e#7690#7900#0" expanded="false" />
-            <element signature="e#8695#9293#0" expanded="false" />
+            <element signature="e#6382#6840#0" expanded="false" />
+            <element signature="e#6469#6579#0" expanded="false" />
+            <element signature="e#6619#6703#0" expanded="false" />
+            <element signature="e#7333#7793#0" expanded="false" />
+            <element signature="e#7838#8048#0" expanded="false" />
+            <element signature="e#8843#9441#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -405,7 +441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -422,7 +457,7 @@
         <state relative-caret-position="360">
           <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding>
-            <element signature="e#685#1233#0" expanded="false" />
+            <element signature="e#687#1235#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -447,7 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -487,7 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -526,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="26" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +617,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -596,25 +624,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/PlaylistModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/SongModel.py">
+    <entry file="file://$PROJECT_DIR$/Model/Song.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="43" column="21" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-          <folding />
+        <state relative-caret-position="54">
+          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/songs.py">
+    <entry file="file://$PROJECT_DIR$/Controller/Controllers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        <state relative-caret-position="269">
+          <caret line="122" column="28" lean-forward="false" selection-start-line="122" selection-start-column="28" selection-end-line="122" selection-end-column="28" />
           <folding>
-            <element signature="e#685#1233#0" expanded="false" />
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#4082#4225#0" expanded="false" />
+            <element signature="e#6382#6840#0" expanded="false" />
+            <element signature="e#6469#6579#0" expanded="false" />
+            <element signature="e#6619#6703#0" expanded="false" />
+            <element signature="e#7333#7793#0" expanded="false" />
+            <element signature="e#7838#8048#0" expanded="false" />
+            <element signature="e#8843#9441#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Album.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/albums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -628,43 +685,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Media/MediaPlayer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="234">
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/PlaylistModel.py">
+    <entry file="file://$PROJECT_DIR$/Views/songs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="47" column="9" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Song.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/AlbumModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Album.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#687#1235#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -676,29 +711,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/albums.py">
+    <entry file="file://$PROJECT_DIR$/Model/AlbumModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+        <state relative-caret-position="288">
+          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller/Controllers.py">
+    <entry file="file://$PROJECT_DIR$/Model/SongModel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="119" column="40" lean-forward="true" selection-start-line="119" selection-start-column="40" selection-end-line="119" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#4082#4225#0" expanded="false" />
-            <element signature="e#4723#6161#0" expanded="false" />
-            <element signature="e#6234#6692#0" expanded="false" />
-            <element signature="e#6321#6431#0" expanded="false" />
-            <element signature="e#6471#6555#0" expanded="false" />
-            <element signature="e#7185#7645#0" expanded="false" />
-            <element signature="e#7690#7900#0" expanded="false" />
-            <element signature="e#8695#9293#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="452">
+          <caret line="43" column="21" lean-forward="false" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
