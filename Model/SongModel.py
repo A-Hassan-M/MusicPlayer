@@ -33,8 +33,15 @@ class SongModel:
             song.featured_bands.append(row[0])
 
         return song
-    def getPlaylistSongs(self):
-        return []
+    def getPlaylistSongs(self,playlist_name):
+        result = conn.execute("SELECT song_name "
+                              "FROM playlist_song " +
+                              "WHERE playlist_name = '" + playlist_name + "'")
+        songs = []
+        for row in result:
+            songs.append(song_model.get_song(row[0]))
+
+        return songs;
 
 
 song_model = SongModel()

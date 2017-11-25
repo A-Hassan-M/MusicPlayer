@@ -11,16 +11,14 @@ class Song_View():
         print("Song:",song.name)
         print("Band/Artist:",song.bands)
         print("Featured artist/band:",song.bands)
-        print("Album:",song.album_title)
+        print("Album:",song.album)
         print("Release date:",song.release_date)
         print("Genres:",song.genres)
 
         choice = input("Enter p to play the song or 0 to go back")
 
         print('/////////////////////////////')
-        if(choice == 'p'):
-            self.choice_listener.onSongOptionsInput(cho = choice,so = song)
-        else: self.choice_listener.onSongOptionsInput(cho = choice)
+        self.choice_listener.onSongOptionsInput(choice)
 
 class AddSong_View():
     choice_listener = None
@@ -38,7 +36,7 @@ class AddSong_View():
 
 
 class SongOptions_listener():
-    def onSongOptionsInput(self,**params):
+    def onSongOptionsInput(self,choice):
         pass
     def onSongCreated(self,song):
         pass

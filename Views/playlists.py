@@ -29,15 +29,15 @@ class PlaylistDetails_View():
 
     def __init__(self):
         self.choice_listener = PlaylistMenu_listener()
-    def showPlaylistDetails(self,playlist, songs):
+    def showPlaylistDetails(self,playlist):
         print('/////////////////////////////\n')
         print("Playlist name:",playlist.name+'\n')
         print("Description:", playlist.description+'\n')
 
-        if(len(songs) == 0):
+        if(len(playlist.songs) == 0):
             print("This playlist is empty!!\nEnter add to add a song to it\nEnter 0 to go back")
         else:
-            for song in songs:
+            for song in playlist.songs:
                 print('*',song.name+'\tDuration',song.length)
 
             print("Enter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")

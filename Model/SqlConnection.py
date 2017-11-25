@@ -1,6 +1,6 @@
 import sqlite3
 
-connection = sqlite3.connect("musicly.db")
+connection = sqlite3.connect("/home/ahmed/PycharmProjects/Musicly/Model/musicly.db")
 
 connection.execute("CREATE TABLE IF NOT EXISTS album (" +
                    "name TEXT PRIMARY KEY);")
