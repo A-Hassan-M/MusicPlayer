@@ -45,15 +45,17 @@ class PlaylistController(PlaylistMenu_listener):
                 return pl
         return None
 
-    def on_playlists_menu_input(self,choice):
-        if(choice == '0'):
+    def on_playlists_menu_input(self,choice,playlist_name=''):
+        if(choice == '1'):
+            self.showPlaylist(playlist_name)
+        elif(choice == '2'):
             Main().showMainMenu()
-        elif(choice == 'add'):
+        elif(choice == '3'):
             self.menu = AddPlayList_View()
             self.menu.choice_listener = self
             self.menu.showPlaylistForm()
-        else:
-            self.showPlaylist(choice)
+        elif(choice == '4'):
+            pm.remove_playlist(playlist_name)
 
     def onSongSelected(self,choice):
         if (choice == '0'):
@@ -120,6 +122,7 @@ class PlaylistSongsController(SongOptions_listener):
             PlaylistController().showPlaylist(self.playlist_name)
         else:
             media_player.play_song(self.song)
+            self.showSongDescription(self.song.name,self.playlist_name)
 
 
     def onSongCreated(self,song):
@@ -233,11 +236,19 @@ class AlbumMenuController(AlbumMenu_listener):
                 return album
         return None
 
-    def onAlbumMenueInput(self, choice):
-        if (choice == '0'):
+    def onAlbumMenuInput(self, choice,album_name=''):
+        print("w ",choice)
+        if (choice == '1'):
+            self.showAlbum(album_name)
+        elif (choice == '2'):
             Main().showMainMenu()
-        else:
-            self.showAlbum(choice)
+        elif (choice == '3'):
+            # self.menu = AddAlbum_View()
+            # self.menu.choice_listener = self
+            # self.menu.showAlbumForm()
+            pass
+        elif (choice == '4'):
+            pm.remove_album(album_name)
 
     def onSongSelected(self, choice):
         if (choice == '0'):

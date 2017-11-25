@@ -9,14 +9,24 @@ class Albums_menu():
         print('/////////////////////////////')
         print("Welcome To Musicly\n")
 
-        print("Albums\n")
-        for album in albums:
-            print('* ' + album.title, '\t tracks:', len(album.number_of_songs))
+        if (len(albums) == 0):
+            print("No albums were found!!\n2- Back to home      3- Add album")
+        else:
+            i = 1
+            for album in albums:
+                print(i, '- ' + album.name, '\t tracks:', len(album.songs))
+                i += 1
+            print("\n1- View album     2- Back to home")
+            print("3- Add album      4- Delete album")
+        choice = input()
 
-        album_name = input("Choose an album or enter 0 for main menu: ")
-
+        if (choice == '4' or choice == '1'):
+            album_name = input("Enter playlist name: ")
+            self.choice_listener.onAlbumMenuInput(choice, album_name)
+        else:
+            print("choice",choice)
+            self.choice_listener.onAlbumMenuInput(choice)
         print('/////////////////////////////')
-        self.choice_listener.onAlbumMenuInput(album_name)
 
 class AlbumDetails_View():
     choice_listener = None
@@ -36,7 +46,7 @@ class AlbumDetails_View():
         self.choice_listener.onSongSelected(song_name)
 
 class AlbumMenu_listener():
-    def onAlbumMenuInput(self, choice):
+    def onAlbumMenuInput(self, choice,additonal_attr=''):
         pass
 
     def onSongSelected(self, choice):
