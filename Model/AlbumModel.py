@@ -3,11 +3,11 @@ class AlbumModel:
     def get_albums(self):
 
 
-        return True
+        return []
 
     def get_album(self, name):
 
-        return True
+        return None
 
     def add_album(self, title, number_of_songs, songs):
 

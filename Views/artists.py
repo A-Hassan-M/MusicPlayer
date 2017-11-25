@@ -1,7 +1,6 @@
 
 class Artists_menu():
     choice_listener = None
-
     def __init__(self):
         self.choice_listener = ArtistMenu_listener()
 
@@ -16,9 +15,8 @@ class Artists_menu():
         artist_name = input("Choose an artist to show his/her songs\nor enter 0 for main menu: ")
 
         print('/////////////////////////////')
-        self.choice_listener.onAlbumMenuInput(artist_name)
+        self.choice_listener.onArtistMenuInput(artist_name)
 
 class ArtistMenu_listener():
     def onArtistMenuInput(self,choice):
-        print(choice)
         pass

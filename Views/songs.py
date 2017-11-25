@@ -18,7 +18,9 @@ class Song_View():
         choice = input("Enter p to play the song or 0 to go back")
 
         print('/////////////////////////////')
-        self.choice_listener.onSongOptionsInput(choice)
+        if(choice == 'p'):
+            self.choice_listener.onSongOptionsInput(cho = choice,so = song)
+        else: self.choice_listener.onSongOptionsInput(cho = choice)
 
 class AddSong_View():
     choice_listener = None
@@ -26,17 +28,17 @@ class AddSong_View():
         self.choice_listener = SongOptions_listener()
     def showSongForm(self):
         song = Song()
-        song.name = input("Enter song name")
-        song.genres = input("Enter song genres seperated by commas").split(',')
-        song.release_date = input("Enter song release date")
-        song.length = input("Enter song duration")
-        song.album = input("Enter song album")
-        song.bands = input("Enter song band/artist")
+        song.name = input("Enter song name: ")
+        song.genres = input("Enter song genres seperated by commas: ").split(',')
+        song.release_date = input("Enter song release date: ")
+        song.length = input("Enter song duration: ")
+        song.album = input("Enter song album: ")
+        song.bands = input("Enter song band/artist: ")
         self.choice_listener.onSongCreated(song)
 
 
 class SongOptions_listener():
-    def onSongOptionsInput(self,choice):
+    def onSongOptionsInput(self,**params):
         pass
     def onSongCreated(self,song):
         pass

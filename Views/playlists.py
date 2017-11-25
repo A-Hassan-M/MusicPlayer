@@ -34,9 +34,13 @@ class PlaylistDetails_View():
         print("Playlist name:",playlist.name+'\n')
         print("Description:", playlist.description+'\n')
 
-        for song in songs:
-            print('*',song.name+'\tDuration',song.length)
-        print("Enter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")
+        if(len(songs) == 0):
+            print("This playlist is empty!!\nEnter add to add a song to it\nEnter 0 to go back")
+        else:
+            for song in songs:
+                print('*',song.name+'\tDuration',song.length)
+
+            print("Enter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")
         choice = input("")
 
         print('/////////////////////////////')
@@ -48,8 +52,8 @@ class AddPlayList_View():
         self.choice_listener = PlaylistMenu_listener()
     def showPlaylistForm(self):
         playlist = Playlist()
-        playlist.name = input("Enter playlist name")
-        playlist.description = input("Enter playlist description")
+        playlist.name = input("Enter playlist name: ")
+        playlist.description = input("Enter playlist description: ")
         self.choice_listener.onPlaylistCreated(playlist)
 
 class PlaylistMenu_listener():
