@@ -40,3 +40,5 @@ class AlbumModel:
 
 
         return True
+
+album_model = AlbumModel()

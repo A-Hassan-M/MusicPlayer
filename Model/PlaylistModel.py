@@ -58,3 +58,5 @@ class PlaylistModel:
                       "WHERE playlist_name = '" + playlist_name + "' " +
                       "AND song_name = '" + song_name + "'")
          conn.commit()
+
+pm = PlaylistModel()

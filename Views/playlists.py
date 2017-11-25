@@ -13,7 +13,7 @@ class Playlists_menu():
 
         print("PlayLists:\n")
         if(len(playlists) == 0):
-            print("No playlists were found!! write add to create a new one")
+            print("No playlists were found!!\n2- Back to home      3- Add playlist")
         else:
             i = 1
             for playlist in playlists:
@@ -23,7 +23,6 @@ class Playlists_menu():
             print("3- Add playlist      4- Delete Playlist")
         choice = input()
 
-        playlist_name = ''
         if(choice == '4' or choice == '1'):
             playlist_name = input("Enter playlist name: ")
             self.choice_listener.on_playlists_menu_input(choice,playlist_name)
@@ -48,14 +47,14 @@ class PlaylistDetails_View():
             self.show_songs()
 
             print("Enter song name to choose a song\nEnter 0 to go back\nEnter add to add a song")
-            print("Or 'order' to order the songs\n")
+            print("Or 'order' to order the songs\nOr p to play playlist songs")
         choice = input("")
 
         # if(choice == 'order'):
         #     order_attr = self.get_order_choice()
 
         print('/////////////////////////////')
-        self.choice_listener.onSongSelected(choice)
+        self.choice_listener.onSongMenuInput(choice)
 
     def show_songs(self):
         songs = self.playlist.songs
@@ -82,7 +81,7 @@ class AddPlayList_View():
 class PlaylistMenu_listener():
     def on_playlists_menu_input(self,choice,additional_attr=''):
         pass
-    def onSongSelected(self,song_name):
+    def onSongMenuInput(self,song_name):
         pass
     def onPlaylistCreated(self,playlist):
         pass

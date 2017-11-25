@@ -1,6 +1,8 @@
 import sqlite3
-
-connection = sqlite3.connect("musicly.db")
+import os
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+print(ROOT_DIR)
+connection = sqlite3.connect(ROOT_DIR+"/musicly.db")
 
 connection.execute("CREATE TABLE IF NOT EXISTS album (" +
                    "name TEXT PRIMARY KEY);")
